@@ -25,13 +25,24 @@ Objectives of C-LinkedLists-1 Lesson:
 //Do not edit below Header Files
 #include <stdio.h>
 #include "FunctionHeadersLinkedLists1.h"
+struct node {
+	int num;
+	struct node *next;
+};
 
 int main(){
 
 	//Test 012SortSll
 
 	//Test numberToLinkedList
-
+	int num = -4568;
+	struct node *head = numberToLinkedList(num);
+	while (head != NULL)
+	{
+		printf("%d", head->num);
+		head = head->next;
+	}
+	//printf("%d", head);
 	//Test removeEveryKthNode
 
 	//Test sortLinkedList
